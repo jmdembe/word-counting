@@ -1,11 +1,11 @@
 var newString = document.querySelector('.my-text').innerText;
 
-function wordSplitter (myStr) {
+function wordCounter (myStr) {
     var frequency = {};
 
     myStr
       .split(' ')
-      .filter (function newArray(myArray) {
+      .filter (function filterArray(myArray) {
         return (myArray.length > 1);
       })
       .forEach(function count (word){
@@ -21,4 +21,4 @@ function wordSplitter (myStr) {
     return frequency;
 };
 
-var result=wordSplitter(newString);
+var result=wordCounter(newString);
