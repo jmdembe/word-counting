@@ -11,14 +11,11 @@ function wordSplitter (myStr) {
 
     var myArray=filterArray.forEach(function count (word){
 
-        console.log("Frequency Word",word, frequency[word]);
-
         if (frequency[word] === undefined) {
             frequency[word] = 1;
         } else {
             frequency[word]++;
         }
-
 
     });
     return frequency;
