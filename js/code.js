@@ -1,11 +1,15 @@
-var newString = 'She sells seashells by the seashore seashells';
+var newString = document.querySelector('.my-text').innerText;
 
 function wordSplitter (myStr) {
     var wordArray = myStr.split(' ');
     var frequency = {};
 
-    wordArray.forEach(function count (word){
-        // frequency[word]=1;
+    var filterArray = wordArray.filter (function newArray(myArray) {
+        return (myArray.length > 1);
+
+    });
+
+    var myArray=filterArray.forEach(function count (word){
 
         console.log("Frequency Word",word, frequency[word]);
 
@@ -15,8 +19,10 @@ function wordSplitter (myStr) {
             frequency[word]++;
         }
 
+
     });
     return frequency;
+
 };
 
 var result=wordSplitter(newString);
