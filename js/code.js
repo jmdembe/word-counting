@@ -1,6 +1,6 @@
 var newString = document.querySelector('.my-text').innerText;
 
-function wordCounter (myStr) {
+(function wordCounter (myStr) {
     var frequency = {};
 
     myStr
@@ -19,6 +19,6 @@ function wordCounter (myStr) {
       });
 
     return frequency;
-};
+})();
 
 var result=wordCounter(newString);
